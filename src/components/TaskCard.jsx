@@ -9,9 +9,10 @@ const TaskCard = ({index,card,handleDelete}) => {
     }
 
     return (
+        
         <div className="border border-2 m-2 p-2 rounded">
             <h4>{card.task}</h4>
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between ">
                 <div>{card.tags.map( c=>{
                     return <span className={btnStyle[c]}>{c}</span>
                 })}</div>

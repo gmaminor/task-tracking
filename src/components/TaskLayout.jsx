@@ -23,13 +23,12 @@ const TaskLayout = () => {
 
     return (
         <div className="container">
+            <div className="row">
+                <div className="d-flex justify-content-center">
+                    <TaskForm setCardData={setCardData} cardData={cardData} />
+                </div>
 
-            <div className="d-flex justify-content-center">
-                <TaskForm setCardData={setCardData} cardData={cardData} />
-            </div>
-            <div className="container">
-
-                <div className="d-flex">
+                <div className="d-flex flex-wrap justify-content-between mt-1">
                     <TaskColumn title='To do' tagName='todo' cardData={cardData} handleDelete={handleDelete} />
                     <TaskColumn title='Doing' tagName='doing' cardData={cardData} handleDelete={handleDelete} />
                     <TaskColumn title='Done' tagName='done' cardData={cardData} handleDelete={handleDelete} />

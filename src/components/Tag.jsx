@@ -12,7 +12,7 @@ const Tag = ({ tagName,clicked,selected}) => {
 
     
     return (
-        <div>
+        <div className=''>
             <button className={selected ? btnStyle[tagName] : btnStyle.default }  type='button' onClick={()=>clicked(tagName)}>{tagName}</button>
         </div>
     )

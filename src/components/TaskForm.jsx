@@ -71,30 +71,31 @@ const TaskForm = ({ setCardData, cardData }) => {
 
     return (
         <div className='container'>
-            <h1 className='d-flex justify-content-center'>TASK TRACKER</h1>
-            <div className="border border-3 ">
-                <form onSubmit={handleSubmit}>
-                    <div className='d-flex justify-content-center m-2'>
-                        <input type="text" name='task' value={taskData.task} placeholder="Enter task "
-                            style={{ width: '93vh' }} onChange={handleChange} />
-                    </div>
-                    <div className="d-flex mt-2 justify-content-center align-items-center">
-                        <Tag tagName='CSS' clicked={clicked} selected={selectedTag.CSS} />
-                        <Tag tagName='JavaScript' clicked={clicked} selected={selectedTag.JavaScript} />
-                        <Tag tagName='HTML' clicked={clicked} selected={selectedTag.HTML} />
-                        <Tag tagName='React' clicked={clicked} selected={selectedTag.React} />
+            <div className='row'>
+                <h1 className='d-flex flex-wrap justify-content-center display-5 shadow bg-dark text-white'>TASK TRACKER</h1>
+                <div className=" ">
+                    <form onSubmit={handleSubmit}>
+                        <div className='d-flex flex-wrap justify-content-center mt-2  '>
+                            <input type="text" name='task' value={taskData.task} placeholder="Enter task title "
+                                style={{ width: '80vh' }} onChange={handleChange} />
+                        </div>
+                        <div className="d-flex flex-wrap  justify-content-center align-items-center mb-5">
+                            <Tag tagName='CSS' clicked={clicked} selected={selectedTag.CSS} />
+                            <Tag tagName='JavaScript' clicked={clicked} selected={selectedTag.JavaScript} />
+                            <Tag tagName='HTML' clicked={clicked} selected={selectedTag.HTML} />
+                            <Tag tagName='React' clicked={clicked} selected={selectedTag.React} />
 
-                        <select className='m-2' style={{ height: '30px' }} name="status" value={taskData.status} onChange={handleChange}>
-                            <option value="todo">To do</option>
-                            <option value="doing">Doing</option>
-                            <option value="done">Done</option>
-                        </select>
-                        <button type='submit' className="btn btn-primary m-2">+Add Task</button>
-                    </div>
+                            <select className='m-2' style={{ height: '30px' }} name="status" value={taskData.status} onChange={handleChange}>
+                                <option value="todo">To do</option>
+                                <option value="doing">Doing</option>
+                                <option value="done">Done</option>
+                            </select>
+                            <button type='submit' className="btn btn-primary m-2">+Add Task</button>
+                        </div>
 
-                </form>
+                    </form>
+                </div>
             </div>
-
         </div>
     )
 }
